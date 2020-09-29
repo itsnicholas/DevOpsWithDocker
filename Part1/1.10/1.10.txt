@@ -1,0 +1,11 @@
+- docker build -t myfirst . 
+
+Dockerfile:
+FROM node:latest
+WORKDIR /mydir
+COPY ./frontend-example-docker .
+RUN npm install
+EXPOSE 5000
+CMD ["npm", "start"]
+
+- docker run -p 5000:5000 myfirst
