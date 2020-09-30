@@ -1,2 +1,2 @@
 1. Ran in Ubuntu for Windows -> docker build -t myfirst .
-2. Ran in Powershell -> docker run -d -p 8000:8000 -v $(pwd)/logs.txt:/mydir/logs.txt myfirst
+2. Ran in Powershell -> docker run -d -p 8000:8000 -v "$(pwd)/logs.txt:/mydir/logs.txt" myfirst

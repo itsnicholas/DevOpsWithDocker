@@ -1,0 +1,7 @@
+Frontend (in separate folder):
+-> docker build -t myfirst .
+-> docker run -d -p 5000:5000 myfirst
+
+Backend (in separate folder):
+-> docker build -t mysecond .
+-> docker run -d -p 8000:8000 mysecond
