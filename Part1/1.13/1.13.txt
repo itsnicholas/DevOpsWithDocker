@@ -1,0 +1,4 @@
+In this exercise I did not build the project beforehand ('./mvnw package' in this case) versus the other exercises.
+
+-> docker build -t my-java-app .
+-> docker run -d -p 8080:8080 my-java-app
