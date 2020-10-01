@@ -1,1 +1,1 @@
-https://hub.docker.com/repository/docker/itsnicholas/highchartbackend
+https://hub.docker.com/r/itsnicholas/highchartbackend
