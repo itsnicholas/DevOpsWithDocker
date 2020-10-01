@@ -1,1 +1,4 @@
 docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
+
+In this exercise I think I have some type of problem because of Windows system as in exercise 1.11 I had to use Powershell and Ubuntu on Windows together to get logging to work but here I couldn´t.
