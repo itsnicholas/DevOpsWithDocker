@@ -1,0 +1,37 @@
+version: '3.5'
+
+services:
+
+##########################
+#  Setup backend-example-docker container
+##########################
+  backend-example-docker:
+    build: ./backend-example-docker
+    environment:
+      PORT: 8000
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend-example-docker:/mydir/backend-example-docker
+    stdin_open: true
+    command: npm start
+
+###########################
+#  Setup frontend-example-docker container
+###########################
+  frontend-example-docker:
+    build: ./frontend-example-docker
+    environment:
+      PORT: 5000
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    volumes:
+      - ./frontend-example-docker:/mydir/frontend-example-docker
+    stdin_open: true
+    command: npm start
+    
+
