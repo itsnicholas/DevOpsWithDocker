@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+
+##########################
+#  Setup ml-kurkkumopo-backend container
+##########################
+  kurkkumopo-backend-docker:
+    build: ./ml-kurkkumopo-backend
+    ports:
+      - 5000:5000
+    volumes:
+      - ./model:/src/model
+    depends_on:
+      - kurkkumopo-training-docker
+
+###########################
+#  Setup ml-kurkkumopo-frontend container
+###########################
+  kurkkumopo-frontend-docker:
+    build: ./ml-kurkkumopo-frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - kurkkumopo-backend-docker
+
+###########################
+#  Setup ml-kurkkumopo-training container
+###########################
+    
+  kurkkumopo-training-docker:
+    build: ./ml-kurkkumopo-training
+    volumes:
+      - ./ml-kurkkumopo-training/imgs:/src/imgs
+      - ./model:/src/model
+
+volumes:
+  model:
