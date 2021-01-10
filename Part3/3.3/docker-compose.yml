@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  frontend-example-docker:
+    container_name: frontend-example-docker
+    build: .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    stdin_open: true
+    restart: always
