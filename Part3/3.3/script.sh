@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf /frontend-example-docker/
 git clone https://github.com/itsnicholas/frontend-example-docker.git
 cd frontend-example-docker
 docker build -t myfirst .
